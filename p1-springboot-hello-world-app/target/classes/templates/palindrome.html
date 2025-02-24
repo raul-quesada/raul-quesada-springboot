@@ -12,7 +12,7 @@
     <button class="btn btn-primary">Verificar</button>
   </form>
   <div th:if="${word}">
-    <h4 th:text="'La palabra ' + ${word} + (${result} ? ' es ' : ' no es ') + 'un palíndromo.'"></h4>
+    <h4 th:text="'La palabra {' + ${word} + (${result} ? '} es ' : ' no es ') + 'un palíndromo.'"></h4>
   </div>
   <a th:href="@{/}" class="btn btn-secondary mt-3">Volver al inicio</a>
 </div>
