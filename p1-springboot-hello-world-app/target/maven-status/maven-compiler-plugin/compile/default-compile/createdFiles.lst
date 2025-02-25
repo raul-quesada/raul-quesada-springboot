@@ -5,8 +5,10 @@ demoapp\Application.class
 demoapp\controller\SquareController.class
 demoapp\controller\EvenController.class
 demoapp\controller\UserData.class
+demoapp\controller\CalculatorController.class
 demoapp\controller\SaludoController.class
 demoapp\controller\PalindromeController.class
+demoapp\service\CalculatorService.class
 demoapp\service\PalindromeService.class
 demoapp\controller\HomeController.class
 demoapp\service\EvenService.class
