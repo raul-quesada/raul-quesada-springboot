@@ -54,6 +54,89 @@ The application consists of various functionalities, each following the **Spring
 - Each service method has corresponding test cases.
 - Controllers are tested using **MockMvc** to simulate HTTP requests.
 
+### 3.1. Testing the Even Number Controller
+
+### ✅ **Purpose:**
+The EvenController handles requests to check whether a number is even or odd. The unit test ensures that:
+- The controller correctly identifies even and odd numbers.
+- The correct view (`evenResult.html`) is returned.
+
+### 🔧 **Testing Approach:**
+- Mocking the **EvenService** dependency.
+- Sending test requests using `MockMvc`.
+- Validating the response message and status.
+
+### 🛠 **What is tested?**
+✔ HTTP request returns the correct response.  
+✔ Service logic is correctly invoked.  
+✔ Even and odd number checks return expected results.
+
+---
+
+### 3.2 Testing the Square Number Controller
+
+### ✅ **Purpose:**
+The SquareController checks if a given number is the square of another. This unit test ensures:
+- The correct computation of square values.
+- Proper response messages for valid and invalid cases.
+
+### 🔧 **Testing Approach:**
+- Sending HTTP POST requests with two numbers as parameters.
+- Mocking the **SquareService** to validate results.
+- Checking that the response returns either **"It is a perfect square"** or **"It is not a perfect square"**.
+
+### 🛠 **What is tested?**
+✔ HTTP response status is correct.  
+✔ The square verification logic works correctly.  
+✔ The correct Thymeleaf template is returned.
+
+---
+
+### 3.3 Testing the Calculator Controller
+
+### ✅ **Purpose:**
+The CalculatorController handles basic arithmetic operations. The unit test ensures:
+- Correct calculations for addition, subtraction, multiplication, and division.
+- The controller correctly processes user input and returns valid results.
+
+### 🔧 **Testing Approach:**
+- Sending HTTP requests with numbers and operations.
+- Verifying response values for each arithmetic operation.
+- Handling edge cases like division by zero.
+
+### 🛠 **What is tested?**
+✔ Addition, subtraction, multiplication, and division return correct values.  
+✔ Division by zero is handled gracefully.  
+✔ The correct result is passed to the Thymeleaf template.
+
+---
+
+### 3.4 Testing the Palindrome Controller
+
+### ✅ **Purpose:**
+The PalindromeController verifies if a given word or phrase is a palindrome. The unit test ensures:
+- The correct identification of palindromes and non-palindromes.
+- The controller properly handles case sensitivity and whitespace.
+
+### 🔧 **Testing Approach:**
+- Sending HTTP requests with test words.
+- Mocking the **PalindromeService**.
+- Verifying that valid palindromes return **"It is a palindrome"** and invalid ones return **"It is not a palindrome"**.
+
+### 🛠 **What is tested?**
+✔ Detection of palindromes regardless of case and spaces.  
+✔ Correct response for non-palindromic words.  
+✔ The correct Thymeleaf template is returned.
+
+---
+
+### 3.5 Conclusion
+
+These unit tests ensure that each controller in the application functions correctly and returns expected results. They help validate:
+- The **correct logic implementation** in services.
+- The **accuracy of responses** returned by controllers.
+- The **correct rendering of views** with Thymeleaf templates.
+
 ---
 
 ## 4. Deployment & Dockerization
